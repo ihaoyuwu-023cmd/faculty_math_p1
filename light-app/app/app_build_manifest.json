@@ -1,0 +1,12 @@
+{
+  "built_at": "2026-07-22T18:17:46+08:00",
+  "pyinstaller_python": "C:\\Python314\\python.exe",
+  "entry": "app\\server.py",
+  "static_directory": "app\\static",
+  "executable": "app\\math-faculty-app.exe",
+  "mode": "windowed",
+  "size_bytes": 10942678,
+  "sha256": "916b599638d05f5b7330bd55a58b1ca4594dfc6f1e9103e4e2e528a5c4750796",
+  "return_code": 0,
+  "all_checks_pass": true
+}

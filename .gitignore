@@ -1,0 +1,24 @@
+# Local runtime state
+light-app/logs/
+light-app/config/app-config.json
+
+# Build outputs and Python cache
+/build/
+light-app/build/
+**/__pycache__/
+*.py[cod]
+
+# Static evidence package is distributed separately from the Git repository.
+evidence-package/
+
+# Local archives and compressed release copies
+*.zip
+*.7z
+*.rar
+*.bak
+
+# OS/editor files
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/

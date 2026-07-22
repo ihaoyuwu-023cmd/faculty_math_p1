@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f4">
+    <meta name="color-scheme" content="light">
+    <title>数学师资数据审阅台</title>
+    <link rel="icon" type="image/png" href="/static/assets/app-icon.png">
+    <link rel="stylesheet" href="/static/styles.css?v=20260722-restructured3">
+    <script defer src="/static/vendor/lucide.min.js"></script>
+    <script defer src="/static/app.js?v=20260722-frontend14"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#view-root">跳到主要内容</a>
+
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主导航">
+        <a class="brand" href="#summary" aria-label="数学师资数据审阅台总览">
+          <img src="/static/assets/app-icon.png" width="36" height="36" alt="">
+          <span class="brand-copy">
+            <strong>数学师资数据</strong>
+            <small>离线审阅台</small>
+          </span>
+        </a>
+
+        <nav class="primary-nav">
+          <a class="nav-item" href="#summary" data-nav="summary">
+            <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+            <span>总览</span>
+          </a>
+          <a class="nav-item" href="#schools" data-nav="schools">
+            <i data-lucide="university" aria-hidden="true"></i>
+            <span>学校</span>
+          </a>
+          <a class="nav-item" href="#faculty" data-nav="faculty">
+            <i data-lucide="users" aria-hidden="true"></i>
+            <span>教师</span>
+          </a>
+          <a class="nav-item" href="#issues" data-nav="issues">
+            <i data-lucide="circle-alert" aria-hidden="true"></i>
+            <span>数据异常</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-meta">
+          <div class="connection-state" data-connection="idle">
+            <span class="connection-dot" aria-hidden="true"></span>
+            <span id="connection-label">等待本地服务</span>
+          </div>
+          <span class="snapshot-label">127 校数学学科样本</span>
+        </div>
+      </aside>
+
+      <main class="main-shell">
+        <header class="topbar">
+          <a class="mobile-brand" href="#summary" aria-label="返回总览">
+            <img src="/static/assets/app-icon.png" width="30" height="30" alt="">
+          </a>
+          <div class="topbar-title">
+            <span id="view-kicker">全国数学学科师资</span>
+            <strong id="view-title">总览</strong>
+          </div>
+          <div class="topbar-actions">
+            <span class="data-scope"><i data-lucide="database" aria-hidden="true"></i>本地数据</span>
+            <a class="icon-button" href="#settings" title="配置静态证据包路径" aria-label="配置静态证据包路径">
+              <i data-lucide="settings" aria-hidden="true"></i>
+            </a>
+            <button class="icon-button" type="button" data-action="refresh" title="刷新当前视图" aria-label="刷新当前视图">
+              <i data-lucide="refresh-cw" aria-hidden="true"></i>
+            </button>
+          </div>
+        </header>
+
+        <div id="view-root" class="view-root" tabindex="-1"></div>
+      </main>
+
+      <nav class="bottom-nav" aria-label="移动端主导航">
+        <a href="#summary" data-nav="summary"><i data-lucide="layout-dashboard" aria-hidden="true"></i><span>总览</span></a>
+        <a href="#schools" data-nav="schools"><i data-lucide="university" aria-hidden="true"></i><span>学校</span></a>
+        <a href="#faculty" data-nav="faculty"><i data-lucide="users" aria-hidden="true"></i><span>教师</span></a>
+        <a href="#issues" data-nav="issues"><i data-lucide="circle-alert" aria-hidden="true"></i><span>异常</span></a>
+      </nav>
+    </div>
+
+    <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+    <aside id="person-drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+      <header class="drawer-header">
+        <div>
+          <span class="eyebrow">教师档案</span>
+          <h2 id="drawer-title">教师详情</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-drawer" title="关闭详情" aria-label="关闭教师详情">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div id="drawer-content" class="drawer-content"></div>
+    </aside>
+
+    <div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
